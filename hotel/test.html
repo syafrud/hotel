@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    J6*IF(E6:INDIRECT( ADDRESS( ROW( INDEX( C6:C30; MATCH(L6; C6:C30; 0) ) );
+    COLUMN( INDEX( C6:C30; MATCH(L6; C6:C30; 0) ) )+2 ) )<>0; COUNTIF(
+    E6:INDIRECT( ADDRESS( ROW( INDEX( C6:C30; MATCH(L6; C6:C30; 0)));
+    COLUMN(INDEX(C6:C30; MATCH(L6; C6:C30; 0)))+2));0))+LARGE(E6:INDIRECT(
+    ADDRESS(ROW(INDEX(C6:C30; MATCH(L6; C6:C30; 0))); COLUMN(INDEX(C6:C30;
+    MATCH(L6; C6:C30; 0)))+2));1)-H6
+  </body>
+</html>
