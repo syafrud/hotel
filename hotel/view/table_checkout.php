@@ -158,7 +158,7 @@ if (!isset($_SESSION['email'])) {
     </header>
     <div class="full">
         <div class="containerT content w-full">
-            <div class="table-title">Data Table Kamar</div>
+            <div class="table-title">Data Checkout</div>
             <table class="data-table" border="1" cellpadding="5">
                 <tr class="header-row">
                     <td>ID RS</td>
@@ -186,17 +186,19 @@ if (!isset($_SESSION['email'])) {
                     </td>
                     <td>
                         <?php if ($keterangan !== 'Sudah Checkout') { ?>
-                        <a href="../action/checkoutA_aksi.php?idc=<?php echo $data1['id_C']; ?>& idrs=<?php echo $data1['id_RS'] ?>"">Checkout</a>
-              <?php } else { ?>
-              Sudah Checkout
-              <?php } ?>
-            </td>
-          </tr>
-          <?php
+                        <a
+                            href="../action/checkoutA_aksi.php?idc=<?php echo $data1['id_C']; ?>& idrs=<?php echo $data1['id_RS'] ?>">Checkout</a>
+                        <?php } else { ?>
+                        Sudah Checkout
+                        <?php } ?>
+                    </td>
+                </tr>
+                <?php
             }
             ?>
-        </table>
-      </div>
+            </table>
+        </div>
     </div>
-  </body>
+</body>
+
 </html>

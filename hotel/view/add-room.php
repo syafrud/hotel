@@ -147,19 +147,20 @@ if (!isset($_SESSION['email'])) {
         /* Center the form horizontally */
         max-width: 800px;
         /* Adjust the max-width as needed */
+        /* background-color: red; */
     }
 
     /* Style for the table */
     table {
         width: 100%;
         border-collapse: collapse;
-        background-color: #f5f5f5;
+        /* background-color: #f5f5f5; */
         border: 1px solid #e0e0e0;
     }
 
     /* Style for table rows */
     tr {
-        background-color: #fff;
+        background-color: ;
     }
 
     /* Style for table data cells */

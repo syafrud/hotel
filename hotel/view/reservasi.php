@@ -324,7 +324,7 @@ if (!isset($_SESSION['email'])) {
                             // Fungsi untuk menghitung dan menampilkan hasil perkalian
                             function hitungHasil() {
                                 // Mengambil nilai NIS dari input
-                                var nis = document.getElementById("lama").value;
+                                var lama = document.getElementById("lama").value;
                                 // Mengambil nilai jenis kasur dari input
                                 var kasur = document.getElementById("kasur");
                                 var harga =
@@ -333,7 +333,7 @@ if (!isset($_SESSION['email'])) {
                                     );
 
                                 // Menghitung hasil perkalian dengan harga (yang telah diambil dari PHP)
-                                var hasil = nis * harga;
+                                var hasil = lama * harga;
 
                                 // Menampilkan hasil di elemen dengan id "harga"
                                 document.getElementById("harga").textContent = hasil;
@@ -354,7 +354,13 @@ if (!isset($_SESSION['email'])) {
 
                             $id_bed = $_GET['id'];
 
-                            $query = "SELECT bed.id_bed, kamar.id_k, kamar.no_kamar FROM kamar INNER JOIN bed ON bed.id_bed = kamar.id_bed LEFT JOIN reserfasi ON kamar.id_k = reserfasi.id_k LEFT JOIN checkout ON checkout.id_RS=reserfasi.id_RS WHERE checkout.id_RS IS NULL and bed.id_bed=" . $id_bed;
+                            $query = "SELECT DISTINCT bed.id_bed,bed.harga, kamar.id_k, kamar.no_kamar
+                            FROM kamar
+                            INNER JOIN bed ON bed.id_bed = kamar.id_bed
+                            LEFT JOIN reserfasi ON kamar.id_k = reserfasi.id_k
+                            LEFT JOIN checkout ON checkout.id_RS = reserfasi.id_RS
+                            LEFT JOIN history ON checkout.id_C = history.id_C
+                            WHERE checkout.id_RS IS NULL AND bed.id_bed='$id_bed' OR history.id_C IS NOT NULL AND bed.id_bed='$id_bed'";
                             $result = mysqli_query($koneksi, $query);
                             while ($row = mysqli_fetch_assoc($result)) {
                                 $id_k = $row['id_k'];
@@ -378,7 +384,7 @@ if (!isset($_SESSION['email'])) {
                         <td><span id="harga"></span></td>
                     </tr>
                     <tr>
-                        <td><input type="submit" value="SIMPAN" id="submit-booking" /></td>
+                        <td><input type="submit" value="RESERVASI" id="submit-booking" /></td>
                     </tr>
                 </table>
             </form>

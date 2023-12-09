@@ -160,7 +160,7 @@ if (!isset($_SESSION['email'])) {
     <div class="full">
         <div class="containerT content w-full">
             <!-- Tambahkan class "content" di sini -->
-            <div class="table-title">Data Table Kamar</div>
+            <div class="table-title">Data Checkin</div>
             <table class="data-table" border="1" cellpadding="5">
                 <tr class="header-row">
                     <td>ID RS</td>
@@ -199,7 +199,7 @@ if (!isset($_SESSION['email'])) {
                     </td>
                     <td>
                         <?php if ($keterangan !== 'Sudah checkin') { ?>
-                        <a href="./checkout.php?id=<?php echo $data1['id_RS']; ?>">Belum checkin</a>
+                        <a href="./checkin.php?id=<?php echo $data1['id_RS']; ?>">Belum checkin</a>
                         <?php } else { ?>
                         Sudah checkin
                         <?php } ?>
