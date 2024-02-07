@@ -1,0 +1,96 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+input[type="text"],
+input[type="checkbox"] {
+  margin: 0;
+  padding: 0;
+}
+
+/* Membuat body memiliki tinggi 100% halaman */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Untuk mengatur konten di tengah horizontal */
+  align-items: center; /* Untuk mengatur konten di tengah vertikal */
+  background-color: #3498db; /* Ganti dengan warna latar belakang yang Anda inginkan */
+  margin: 0; /* Hapus margin default */
+  font-family: Arial, sans-serif; /* Ganti dengan font yang Anda inginkan */
+  color: #000; /* Warna teks */
+}
+
+/* Style the form container */
+div {
+  text-align: center;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* Ganti dengan warna latar belakang yang Anda inginkan */
+}
+
+/* Style the form heading */
+h3 {
+  font-size: 32px; /* Menjadikan judul lebih besar */
+  margin-bottom: 20px;
+  color: #333; /* Ganti warna teks */
+}
+
+/* Style the form table */
+table {
+  width: 100%;
+}
+
+/* Style the table cells */
+td {
+  padding: 10px;
+}
+
+/* Style the input fields */
+input[type="number"],
+input[type="text"],
+select,
+input[type="checkbox"] {
+  width: 166px; /* Mengatur lebar input teks dan checkbox menjadi 166px */
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 16px; /* Mengatur ukuran teks pada input teks dan checkbox */
+}
+
+/* Style the submit button */
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.view-siswa-button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+/* Hover effect for the button */
+.view-siswa-button:hover {
+  background-color: #45a049;
+}
