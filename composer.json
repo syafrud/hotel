@@ -1,5 +1,5 @@
 {
-  "name": "hotel-management",
+  "name": "hotel",
   "description": "Hotel Management System",
   "require": {
     "php": "^7.4|^8.0"
