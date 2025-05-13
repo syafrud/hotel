@@ -11,14 +11,14 @@ if (!isset($_SESSION['email'])) {
 
 <head>
     <style>
-    .btn_1,
-    a,
-    a.animated_link,
-    a.btn_1,
-    a:focus,
-    a:hover {
-        text-decoration: none;
-    }
+        .btn_1,
+        a,
+        a.animated_link,
+        a.btn_1,
+        a:focus,
+        a:hover {
+            text-decoration: none;
+        }
     </style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.1/dist/index.umd.min.js"></script>
@@ -28,195 +28,195 @@ if (!isset($_SESSION['email'])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../css/home.css" />
     <style>
-    /* Reset beberapa gaya default */
-    body,
-    h1,
-    h2,
-    h3,
-    p,
-    div {
-        margin: 0;
-        padding: 0;
-    }
+        /* Reset beberapa gaya default */
+        body,
+        h1,
+        h2,
+        h3,
+        p,
+        div {
+            margin: 0;
+            padding: 0;
+        }
 
-    /* Mengatur tampilan latar belakang dan font dasar */
-    body {
-        font-family: Arial, sans-serif;
-        background: linear-gradient(to bottom, #3498db, #2980b9);
-        /* Warna latar belakang bergradasi */
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100vh;
-    }
+        /* Mengatur tampilan latar belakang dan font dasar */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #3498db, #2980b9);
+            /* Warna latar belakang bergradasi */
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+        }
 
-    .full {
-        min-height: 92%;
-    }
+        .full {
+            min-height: 92%;
+        }
 
-    /* Gaya judul halaman */
-    h1 {
-        text-align: center;
-        padding: 20px;
-        background-color: #333;
-        color: #fff;
-        margin: 0;
-    }
+        /* Gaya judul halaman */
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin: 0;
+        }
 
-    /* Gaya kontainer tabel */
-    .containerT {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        margin: 20px;
-        text-align: center;
-        margin: 0 auto;
-        /* Add this line to center the content horizontally */
-        max-width: 800px;
-        /* Adjust the max-width as needed */
-    }
+        /* Gaya kontainer tabel */
+        .containerT {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            text-align: center;
+            margin: 0 auto;
+            /* Add this line to center the content horizontally */
+            max-width: 800px;
+            /* Adjust the max-width as needed */
+        }
 
-    /* Gaya judul tabel */
-    .table-title {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        background-color: #007bff;
-        /* Warna latar belakang biru modern untuk judul */
-        color: #fff;
-        /* Warna teks dalam judul */
-        padding: 10px;
-        /* Tambahkan ruang padding untuk tampilan yang lebih baik */
-    }
+        /* Gaya judul tabel */
+        .table-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background-color: #007bff;
+            /* Warna latar belakang biru modern untuk judul */
+            color: #fff;
+            /* Warna teks dalam judul */
+            padding: 10px;
+            /* Tambahkan ruang padding untuk tampilan yang lebih baik */
+        }
 
-    /* Gaya tabel */
-    .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        background-color: #fff;
-        /* Warna latar belakang tabel */
-        border: 1px solid #007bff;
-        /* Warna border tabel (misalnya, biru) */
-        color: #333;
-        /* Warna teks dalam tabel */
-    }
+        /* Gaya tabel */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            /* Warna latar belakang tabel */
+            border: 1px solid #007bff;
+            /* Warna border tabel (misalnya, biru) */
+            color: #333;
+            /* Warna teks dalam tabel */
+        }
 
-    .data-table th,
-    .data-table td {
-        padding: 10px;
-        text-align: left;
-    }
+        .data-table th,
+        .data-table td {
+            padding: 10px;
+            text-align: left;
+        }
 
-    /* Gaya baris header tabel */
-    .header-row {
-        background-color: #007bff;
-        /* Warna latar belakang header */
-        color: #fff;
-        /* Warna teks header */
-    }
+        /* Gaya baris header tabel */
+        .header-row {
+            background-color: #007bff;
+            /* Warna latar belakang header */
+            color: #fff;
+            /* Warna teks header */
+        }
 
-    /* Gaya baris tabel alternatif */
-    .data-table tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
+        /* Gaya baris tabel alternatif */
+        .data-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
-    /* Gaya data dalam tabel */
-    .data-table tr.data-row:hover {
-        background-color: #d5dbdb;
-        /* Warna latar belakang saat dihover */
-    }
+        /* Gaya data dalam tabel */
+        .data-table tr.data-row:hover {
+            background-color: #d5dbdb;
+            /* Warna latar belakang saat dihover */
+        }
 
-    .hh {
-        min-height: 7%;
-    }
+        .hh {
+            min-height: 7%;
+        }
 
-    /* Gaya tombol Tambahkan data baru */
-    form {
-        padding: 20px;
-        /* Add padding to the form */
-        background-color: #fff;
-        /* Background color for the form */
-        border-radius: 5px;
-        /* Rounded corners */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        /* Box shadow for a subtle depth effect */
-        margin: 20px;
-        text-align: center;
-        margin: 0 auto;
-        /* Center the form horizontally */
-        max-width: 800px;
-        /* Adjust the max-width as needed */
-        /* background-color: red; */
-    }
+        /* Gaya tombol Tambahkan data baru */
+        form {
+            padding: 20px;
+            /* Add padding to the form */
+            background-color: #fff;
+            /* Background color for the form */
+            border-radius: 5px;
+            /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* Box shadow for a subtle depth effect */
+            margin: 20px;
+            text-align: center;
+            margin: 0 auto;
+            /* Center the form horizontally */
+            max-width: 800px;
+            /* Adjust the max-width as needed */
+            /* background-color: red; */
+        }
 
-    /* Style for the table */
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        /* background-color: #f5f5f5; */
-        border: 1px solid #e0e0e0;
-    }
+        /* Style for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            /* background-color: #f5f5f5; */
+            border: 1px solid #e0e0e0;
+        }
 
-    /* Style for table rows */
-    tr {
-        background-color: ;
-    }
+        /* Style for table rows */
+        tr {
+            /* background-color: ; */
+        }
 
-    /* Style for table data cells */
-    td {
-        padding: 10px;
-        text-align: left;
-    }
+        /* Style for table data cells */
+        td {
+            padding: 10px;
+            text-align: left;
+        }
 
-    /* Style for input elements */
-    input[type="text"],
-    input[type="number"],
-    input[type="date"] {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-bottom: 10px;
-        transition: border-color 0.3s;
-    }
+        /* Style for input elements */
+        input[type="text"],
+        input[type="number"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+        }
 
-    input[type="text"]:focus,
-    input[type="number"]:focus,
-    input[type="date"]:focus {
-        border-color: #007bff;
-    }
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus {
+            border-color: #007bff;
+        }
 
-    /* Style for select elements */
-    select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        margin-bottom: 10px;
-        transition: border-color 0.3s;
-    }
+        /* Style for select elements */
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            transition: border-color 0.3s;
+        }
 
-    select:focus {
-        border-color: #007bff;
-    }
+        select:focus {
+            border-color: #007bff;
+        }
 
-    /* Style for the submit button */
-    input[type="submit"] {
-        background-color: #007bff;
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-weight: bold;
-        text-transform: uppercase;
-        transition: background-color 0.3s;
-    }
+        /* Style for the submit button */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+        }
 
-    input[type="submit"]:hover {
-        background-color: #0056b3;
-    }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 
