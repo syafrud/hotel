@@ -1,14 +1,13 @@
 <?php
 // $koneksi = mysqli_connect("localhost", "root", "", "hotel");
 
-$host = getenv('MYSQLHOST') ?: 'localhost';
-$user = getenv('MYSQLUSER') ?: 'root';
-$pass = getenv('MYSQLPASSWORD') ?: '';
-$db   = getenv('MYSQLDATABASE') ?: 'hotel';
+$host = getenv('DB_HOST') ?: 'localhost';
+$user = getenv('DB_USER') ?: 'root';
+$pass = getenv('DB_PASSWORD') ?: '';
+$db = getenv('DB_NAME') ?: 'hotel';
 
-$conn = new mysqli($host, $user, $pass, $db);
+$koneksi = mysqli_connect($host, $user, $pass, $db);
 
-// Cek koneksi
-if ($conn->connect_error) {
-    die("Koneksi gagal: " . $conn->connect_error);
+if (!$koneksi) {
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
