@@ -1,0 +1,23 @@
+# .gitignore
+
+# Ignore local environment files
+.env
+.env.local
+
+# Ignore vendor directory (if you use Composer)
+/vendor/
+
+# Ignore editor and OS specific files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore logs
+*.log
+/logs/
+
+# Ignore sensitive files
+config.php
